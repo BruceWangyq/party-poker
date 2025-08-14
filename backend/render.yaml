@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: party-poker-backend
+    env: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 24h
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 900000
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: 100
+      - key: LOG_LEVEL
+        value: info
+      - key: MAX_PLAYERS_PER_ROOM
+        value: 8
+      - key: MIN_PLAYERS_PER_ROOM
+        value: 2
+      - key: ROOM_CODE_LENGTH
+        value: 6
+      - key: ROOM_EXPIRY_HOURS
+        value: 24
+      - key: DEFAULT_SMALL_BLIND
+        value: 10
+      - key: DEFAULT_BIG_BLIND
+        value: 20
+      - key: DEFAULT_STARTING_CHIPS
+        value: 1000
+    autoDeploy: true
