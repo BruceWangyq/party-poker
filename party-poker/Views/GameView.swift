@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var room: Room
+    @ObservedObject var roomManager: RoomManager
     let playerName: String
     @Environment(\.presentationMode) var presentationMode
     
@@ -147,18 +148,18 @@ struct GameView: View {
                     VStack(spacing: 12) {
                         HStack(spacing: 12) {
                             Button("Fold") {
-                                gameState.playerAction(action: .fold)
+                                roomManager.sendPlayerAction(action: .fold)
                             }
                             .buttonStyle(PokerButtonStyle(color: .red))
                             
                             if gameState.currentBet == 0 {
                                 Button("Check") {
-                                    gameState.playerAction(action: .check)
+                                    roomManager.sendPlayerAction(action: .check)
                                 }
                                 .buttonStyle(PokerButtonStyle(color: .blue))
                             } else {
                                 Button("Call $\(gameState.currentBet)") {
-                                    gameState.playerAction(action: .call)
+                                    roomManager.sendPlayerAction(action: .call)
                                 }
                                 .buttonStyle(PokerButtonStyle(color: .green))
                             }
@@ -193,7 +194,7 @@ struct GameView: View {
                                 )
                                 
                                 Button("Raise to $\(betAmount)") {
-                                    gameState.playerAction(action: .raise, amount: betAmount - gameState.currentBet)
+                                    roomManager.sendPlayerAction(action: .raise, amount: betAmount - gameState.currentBet)
                                     showingBetSlider = false
                                 }
                                 .buttonStyle(PokerButtonStyle(color: .orange))
@@ -206,19 +207,19 @@ struct GameView: View {
                     .padding(.horizontal)
                 } else if !gameState.isHandActive {
                     Button("Start New Hand") {
-                        gameState.startNewHand()
+                        // This should be handled by the server now, not locally
+                        // The server will automatically start new hands
                     }
                     .buttonStyle(PokerButtonStyle(color: .green))
                     .padding(.horizontal)
+                    .disabled(true) // Disable local hand start
                 }
             }
             .padding(.bottom)
         }
         .navigationBarHidden(true)
         .onAppear {
-            if !gameState.isHandActive {
-                gameState.startNewHand()
-            }
+            // Remove local hand starting - this should be handled by the server
         }
     }
 }

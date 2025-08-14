@@ -144,7 +144,7 @@ struct RoomLobbyView: View {
             QRCodeView(room: room)
         }
         .fullScreenCover(isPresented: $showingGameView) {
-            GameView(room: room, playerName: playerName)
+            GameView(room: room, roomManager: roomManager, playerName: playerName)
         }
         .onChange(of: room.status) { _, status in
             if status == .playing {

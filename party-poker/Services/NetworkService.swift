@@ -215,6 +215,26 @@ class NetworkService: ObservableObject {
         socket.emit("game:start")
     }
     
+    func sendPlayerAction(playerId: String, action: PlayerAction, amount: Int? = nil) {
+        guard let socket = socket, isConnected else {
+            print("❌ Not connected to server")
+            roomErrorSubject.send("Not connected to server")
+            return
+        }
+        
+        var requestData: [String: Any] = [
+            "playerId": playerId,
+            "action": action.rawValue
+        ]
+        
+        if let amount = amount {
+            requestData["amount"] = amount
+        }
+        
+        print("🎲 Sending player action: \(requestData)")
+        socket.emit("game:action", requestData)
+    }
+    
     // MARK: - Event Handlers
     
     private func handleRoomCreated(data: [Any]) {

@@ -150,6 +150,15 @@ class RoomManager: ObservableObject {
         networkService.startGame()
     }
     
+    func sendPlayerAction(action: PlayerAction, amount: Int? = nil) {
+        guard isConnected, let playerId = currentPlayerId else {
+            connectionError = "Cannot send action - not connected or not in room"
+            return
+        }
+        
+        networkService.sendPlayerAction(playerId: playerId, action: action, amount: amount)
+    }
+    
     // MARK: - Utility
     
     var canStartGame: Bool {
