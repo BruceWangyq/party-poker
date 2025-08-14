@@ -1,0 +1,105 @@
+{
+  "" : {
+    "const-values" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/party-poker-master.swiftconstvalues",
+    "dependencies" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/party-poker-master.d",
+    "diagnostics" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/party-poker-master.dia",
+    "emit-module-dependencies" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/party-poker-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/party-poker-master-emit-module.dia",
+    "swift-dependencies" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/party-poker-master.swiftdeps"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/AppDelegate.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/AppDelegate.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/GameScene.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameScene.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameScene.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameScene.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/GameViewController.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameViewController.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameViewController.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameViewController.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Models/Card.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/Card.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/Card.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/Card.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Models/GameState.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameState.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameState.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameState.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Models/Player.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/Player.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/Player.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/Player.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Models/Room.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/Room.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/Room.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/Room.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/SceneDelegate.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/SceneDelegate.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/SceneDelegate.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/SceneDelegate.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Services/NetworkService.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/NetworkService.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/NetworkService.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/NetworkService.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Services/PokerEngine.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/PokerEngine.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/PokerEngine.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/PokerEngine.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Services/RoomManager.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/RoomManager.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/RoomManager.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/RoomManager.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Views/ContentView.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Views/CreateRoomView.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/CreateRoomView.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/CreateRoomView.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/CreateRoomView.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Views/GameView.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameView.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameView.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/GameView.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Views/JoinRoomView.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/JoinRoomView.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/JoinRoomView.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/JoinRoomView.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Views/QRCodeView.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/QRCodeView.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/QRCodeView.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/QRCodeView.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Views/QRScannerView.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/QRScannerView.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/QRScannerView.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/QRScannerView.o"
+  },
+  "/Users/wangyuqiu/Documents/project/party-poker/party-poker/Views/RoomLobbyView.swift" : {
+    "index-unit-output-path" : "/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/RoomLobbyView.o",
+    "llvm-bc" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/RoomLobbyView.bc",
+    "object" : "/Users/wangyuqiu/Documents/project/party-poker/build/party-poker.build/Release-iphoneos/party-poker.build/Objects-normal/arm64/RoomLobbyView.o"
+  }
+}
