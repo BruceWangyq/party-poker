@@ -44,7 +44,7 @@ class NetworkService: ObservableObject {
         gameEventSubject.eraseToAnyPublisher()
     }
     
-    private let serverURL = "http://localhost:3001"
+    private let serverURL = "https://party-poker.onrender.com"
     
     func connect() {
         print("🌐 Connecting to server: \(serverURL)")

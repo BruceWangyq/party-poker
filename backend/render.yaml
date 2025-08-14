@@ -35,4 +35,6 @@ services:
         value: 20
       - key: DEFAULT_STARTING_CHIPS
         value: 1000
+      - key: ALLOWED_ORIGINS
+        value: https://party-poker.onrender.com
     autoDeploy: true
