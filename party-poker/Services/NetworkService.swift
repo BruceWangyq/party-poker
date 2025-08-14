@@ -88,6 +88,7 @@ class NetworkService: ObservableObject {
         // Connection events
         socket.on(clientEvent: .connect) { [weak self] data, ack in
             print("✅ Connected to server")
+            print("   Socket ID: \(self?.socket?.sid ?? "unknown")")
             DispatchQueue.main.async {
                 self?.isConnected = true
                 self?.connectionError = nil
@@ -257,7 +258,7 @@ class NetworkService: ObservableObject {
     }
     
     private func handleRoomUpdated(data: [Any]) {
-        print("🔄 Room updated event: \(data)")
+        print("🔄 Room updated event received")
         
         guard let roomDict = data.first as? [String: Any] else {
             print("❌ Invalid room updated format")
@@ -267,6 +268,8 @@ class NetworkService: ObservableObject {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: roomDict)
             let room = try JSONDecoder().decode(Room.self, from: jsonData)
+            
+            print("✅ Room update decoded - \(room.players.count) players")
             
             DispatchQueue.main.async {
                 self.roomUpdatedSubject.send(room)

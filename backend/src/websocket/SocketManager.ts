@@ -104,6 +104,7 @@ export class SocketManager {
           // Update player socket ID in room
           this.roomManager.updatePlayerSocket(room.id, playerId, socket.id);
 
+
           socket.emit('room:created', { room, playerId });
           
           logWebSocketEvent('Room Created', socket.id, { 
@@ -143,9 +144,9 @@ export class SocketManager {
           // Notify player
           socket.emit('room:joined', { room, playerId });
           
-          // Notify other players
-          socket.to(room.id).emit('room:updated', room);
-          socket.to(room.id).emit('game:event', {
+          // Notify all players in room (including existing ones)
+          this.io.in(room.id).emit('room:updated', room);
+          this.io.in(room.id).emit('game:event', {
             type: GameEventType.PlayerJoined,
             data: { playerId, nickname: data.nickname },
             timestamp: new Date()
@@ -201,9 +202,9 @@ export class SocketManager {
           this.gameManager.initializeGame(room);
           const events = this.gameManager.startNewHand(room);
 
-          // Broadcast game start
-          this.io.to(roomId).emit('room:updated', room);
-          this.io.to(roomId).emit('game:event', {
+          // Broadcast game start to all players
+          this.io.in(roomId).emit('room:updated', room);
+          this.io.in(roomId).emit('game:event', {
             type: GameEventType.GameStarted,
             data: { handNumber: room.gameState.handNumber },
             timestamp: new Date()
@@ -211,7 +212,7 @@ export class SocketManager {
 
           // Broadcast all hand start events
           events.forEach(event => {
-            this.io.to(roomId).emit('game:event', event);
+            this.io.in(roomId).emit('game:event', event);
           });
 
           // Notify current player
@@ -278,11 +279,11 @@ export class SocketManager {
           // Process action
           const events = this.gameManager.processPlayerAction(room, data);
 
-          // Broadcast updates
-          this.io.to(roomId).emit('room:updated', room);
+          // Broadcast updates to all players
+          this.io.in(roomId).emit('room:updated', room);
           
           events.forEach(event => {
-            this.io.to(roomId).emit('game:event', event);
+            this.io.in(roomId).emit('game:event', event);
           });
 
           // Notify next player if game is still active

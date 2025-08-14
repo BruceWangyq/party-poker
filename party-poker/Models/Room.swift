@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoomSettings: Codable {
+struct RoomSettings: Codable, Equatable {
     var maxPlayers: Int = 8
     var minPlayers: Int = 2
     var smallBlind: Int = 10
@@ -22,7 +22,7 @@ enum RoomStatus: String, Codable {
     case finished = "finished"
 }
 
-class Room: ObservableObject, Identifiable, Codable {
+class Room: ObservableObject, Identifiable, Codable, Equatable {
     @Published var id: String
     @Published var code: String
     @Published var hostId: String
@@ -170,5 +170,10 @@ class Room: ObservableObject, Identifiable, Codable {
     
     func endGame() {
         gameState.phase = .handComplete
+    }
+    
+    // MARK: - Equatable conformance
+    static func == (lhs: Room, rhs: Room) -> Bool {
+        return lhs.id == rhs.id
     }
 }

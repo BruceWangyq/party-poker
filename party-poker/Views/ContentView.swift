@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var showingCreateRoom = false
     @State private var showingJoinRoom = false
     @State private var playerName = ""
+    @State private var shouldNavigateToLobby = false
     
     var body: some View {
         NavigationView {
@@ -107,16 +108,20 @@ struct ContentView: View {
                 
                 // Current room info
                 if let currentRoom = roomManager.currentRoom {
-                    VStack {
-                        Text("Current Room: \(currentRoom.code)")
-                            .font(.headline)
-                        
-                        NavigationLink(
-                            destination: RoomLobbyView(room: currentRoom, roomManager: roomManager, playerName: playerName),
-                            isActive: .constant(true)
-                        ) {
-                            EmptyView()
+                    NavigationLink(
+                        destination: RoomLobbyView(room: currentRoom, roomManager: roomManager, playerName: playerName),
+                        isActive: $shouldNavigateToLobby
+                    ) {
+                        VStack {
+                            Text("Current Room: \(currentRoom.code)")
+                                .font(.headline)
+                            Text("Tap to enter lobby")
+                                .font(.subheadline)
+                                .foregroundColor(.blue)
                         }
+                        .padding()
+                        .background(Color.blue.opacity(0.1))
+                        .cornerRadius(12)
                     }
                 }
             }
@@ -131,6 +136,13 @@ struct ContentView: View {
         .onAppear {
             print("ContentView: Appeared successfully")
             roomManager.connect()
+        }
+        .onChange(of: roomManager.currentRoom) { _, room in
+            if room != nil {
+                shouldNavigateToLobby = true
+            } else {
+                shouldNavigateToLobby = false
+            }
         }
     }
 }

@@ -59,12 +59,21 @@ class RoomManager: ObservableObject {
         
         // Handle room updates
         networkService.roomUpdated
-            .sink { [weak self] room in
-                print("🔄 Room updated - Players: \(room.players.count)")
-                print("   Game Phase: \(room.gameState.phase)")
-                print("   Room Status: \(room.status)")
-                print("   Is Hand Active: \(room.gameState.isHandActive)")
-                self?.currentRoom = room
+            .sink { [weak self] updatedRoom in
+                print("🔄 Room update: \(updatedRoom.players.count) players")
+                
+                // Update existing room object's properties instead of replacing entire object
+                if let existingRoom = self?.currentRoom {
+                    // Update all properties to match the updated room
+                    existingRoom.players = updatedRoom.players
+                    existingRoom.gameState = updatedRoom.gameState
+                    existingRoom.settings = updatedRoom.settings
+                    existingRoom.isActive = updatedRoom.isActive
+                    existingRoom.lastActivity = updatedRoom.lastActivity
+                } else {
+                    // First time - set the room
+                    self?.currentRoom = updatedRoom
+                }
             }
             .store(in: &cancellables)
         

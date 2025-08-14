@@ -77,7 +77,7 @@ struct Hand: Comparable {
     }
 }
 
-class GameState: ObservableObject, Codable {
+class GameState: ObservableObject, Codable, Equatable {
     @Published var phase: GamePhase = .waiting
     @Published var communityCards: [Card] = []
     @Published var pot: Int = 0
@@ -411,5 +411,13 @@ class GameState: ObservableObject, Codable {
         }
         // Check for A-2-3-4-5 straight
         return ranks.contains(14) && ranks.contains(2) && ranks.contains(3) && ranks.contains(4) && ranks.contains(5)
+    }
+    
+    // MARK: - Equatable conformance
+    static func == (lhs: GameState, rhs: GameState) -> Bool {
+        return lhs.phase == rhs.phase &&
+               lhs.handNumber == rhs.handNumber &&
+               lhs.currentPlayerIndex == rhs.currentPlayerIndex &&
+               lhs.isHandActive == rhs.isHandActive
     }
 }

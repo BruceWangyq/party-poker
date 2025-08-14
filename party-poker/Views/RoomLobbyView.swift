@@ -14,9 +14,10 @@ struct RoomLobbyView: View {
     
     @State private var showingQRCode = false
     @State private var showingGameView = false
+    @Environment(\.presentationMode) var presentationMode
     
     var isHost: Bool {
-        room.players.first?.name == playerName
+        roomManager.isHost
     }
     
     var body: some View {
@@ -71,7 +72,7 @@ struct RoomLobbyView: View {
                     ForEach(room.players.indices, id: \.self) { index in
                         PlayerRowView(
                             player: room.players[index],
-                            isHost: index == 0,
+                            isHost: room.players[index].id == room.hostId,
                             isCurrentPlayer: room.players[index].name == playerName
                         )
                     }
@@ -160,6 +161,7 @@ struct RoomLobbyView: View {
     
     private func leaveRoom() {
         roomManager.leaveRoom()
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
